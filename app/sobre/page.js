@@ -7,6 +7,18 @@ import { Quote } from 'lucide-react'
 
 export const revalidate = 60
 
+export const metadata = {
+  title: 'Sobre o cantor',
+  description:
+    'Conheça a história do cantor Luan Severo: a trajetória na música, o repertório e o que move cada show.',
+  alternates: { canonical: '/sobre' },
+  openGraph: {
+    title: 'Sobre o cantor | Luan Severo',
+    description: 'A história e a trajetória na música do cantor Luan Severo.',
+    url: '/sobre',
+  },
+}
+
 export default async function SobrePage() {
   const [conteudo, fotos] = await Promise.all([getConteudo(), getGaleria()])
 

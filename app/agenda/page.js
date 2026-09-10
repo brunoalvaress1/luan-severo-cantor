@@ -7,6 +7,18 @@ import { CalendarX2, MessageCircle } from 'lucide-react'
 
 export const revalidate = 60
 
+export const metadata = {
+  title: 'Agenda de shows',
+  description:
+    'Todas as próximas datas e cidades dos shows do cantor Luan Severo. Confira a agenda completa e garanta presença.',
+  alternates: { canonical: '/agenda' },
+  openGraph: {
+    title: 'Agenda de shows | Luan Severo',
+    description: 'Próximas datas e cidades dos shows do cantor Luan Severo.',
+    url: '/agenda',
+  },
+}
+
 const NOMES_MES = [
   'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
   'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro',

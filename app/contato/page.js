@@ -6,6 +6,18 @@ import { Phone, Mail } from 'lucide-react'
 
 export const revalidate = 60
 
+export const metadata = {
+  title: 'Contato e contratação',
+  description:
+    'Contrate o cantor Luan Severo para o seu evento. Escolha uma data livre, envie os dados e fale direto pelo WhatsApp.',
+  alternates: { canonical: '/contato' },
+  openGraph: {
+    title: 'Contato e contratação | Luan Severo',
+    description: 'Contrate o cantor Luan Severo para o seu evento.',
+    url: '/contato',
+  },
+}
+
 export default async function ContatoPage() {
   const [conteudo, shows] = await Promise.all([getConteudo(), getProximosShows()])
 

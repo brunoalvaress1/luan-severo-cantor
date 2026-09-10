@@ -6,6 +6,18 @@ import { ImageOff } from 'lucide-react'
 
 export const revalidate = 30
 
+export const metadata = {
+  title: 'Fotos e vídeos',
+  description:
+    'Bastidores, shows e momentos na estrada com o cantor Luan Severo. Veja fotos e vídeos das apresentações.',
+  alternates: { canonical: '/videos' },
+  openGraph: {
+    title: 'Fotos e vídeos | Luan Severo',
+    description: 'Bastidores, shows e momentos na estrada com o cantor Luan Severo.',
+    url: '/videos',
+  },
+}
+
 export default async function VideosPage() {
   const [conteudo, posts] = await Promise.all([getConteudo(), getPosts()])
 

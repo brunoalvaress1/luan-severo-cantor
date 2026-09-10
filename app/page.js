@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { ShowLinha, ShowCard } from '@/components/ShowCard'
 import AgendaCalendario from '@/components/AgendaCalendario'
+import DadosEstruturados from '@/components/DadosEstruturados'
 import { getProximosShows, getConteudo } from '@/lib/data'
 import Link from 'next/link'
 import { Calendar, PlayCircle, ArrowRight, Sparkles } from 'lucide-react'
@@ -19,6 +20,7 @@ export default async function HomePage() {
 
   return (
     <>
+      <DadosEstruturados conteudo={conteudo} />
       <Header conteudo={conteudo} />
 
       <main className="overflow-hidden">
