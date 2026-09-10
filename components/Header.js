@@ -32,6 +32,7 @@ export default function Header({ conteudo = {} }) {
   }, [menuAberto])
 
   return (
+    <>
     <header
       className={`sticky top-0 z-50 glass transition-all duration-300 ${
         rolou ? 'border-b border-black/10 shadow-sm' : 'border-b border-transparent'
@@ -82,15 +83,18 @@ export default function Header({ conteudo = {} }) {
           </button>
         </div>
       </div>
-
-      <MenuMobile
-        aberto={menuAberto}
-        conteudo={conteudo}
-        pathname={pathname}
-        onFechar={() => setMenuAberto(false)}
-        redesSociais={redesSociais}
-      />
     </header>
+
+    {/* Fora do <header> de propósito: o header tem backdrop-filter (efeito vidro),
+        e isso prenderia o position:fixed do menu à altura do header em vez da tela. */}
+    <MenuMobile
+      aberto={menuAberto}
+      conteudo={conteudo}
+      pathname={pathname}
+      onFechar={() => setMenuAberto(false)}
+      redesSociais={redesSociais}
+    />
+    </>
   )
 }
 
@@ -116,7 +120,7 @@ function Logo({ conteudo, compacto }) {
 
 function MenuMobile({ aberto, onFechar, redesSociais, pathname }) {
   return (
-    <div className={`fixed inset-0 z-50 md:hidden ${aberto ? '' : 'pointer-events-none'}`}>
+    <div className={`fixed inset-0 z-[70] md:hidden ${aberto ? '' : 'pointer-events-none'}`}>
       <div
         className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${aberto ? 'opacity-100' : 'opacity-0'}`}
         onClick={onFechar}
