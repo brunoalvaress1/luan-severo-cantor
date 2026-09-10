@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { supabase } from '@/lib/supabaseClient'
 import { uploadImagem } from '@/lib/uploadImagem'
 import { agruparConteudo } from '@/lib/adminCampos'
+import { formatarHorario } from '@/lib/formato'
 import { ToastProvider, useToast } from '@/components/admin/Toasts'
 import {
   Trash2, LogOut, Plus, Calendar as CalendarIcon, CheckCircle2, RefreshCw,
@@ -123,7 +124,7 @@ function AdminDashboard() {
     const resp = await fetch('/api/admin/shows', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${sessao.access_token}` },
-      body: JSON.stringify(novoShow),
+      body: JSON.stringify({ ...novoShow, horario: formatarHorario(novoShow.horario) }),
     })
     const resultado = await resp.json()
     setSalvandoShow(false)
@@ -331,8 +332,11 @@ function AdminDashboard() {
                       onChange={(e) => setNovoShow({ ...novoShow, data_show: e.target.value })} className="entrada" />
                   </Campo>
                   <Campo label="Horário">
-                    <input placeholder="ex: 22h" value={novoShow.horario}
-                      onChange={(e) => setNovoShow({ ...novoShow, horario: e.target.value })} className="entrada" />
+                    <input placeholder="ex: 22:00" value={novoShow.horario}
+                      onChange={(e) => setNovoShow({ ...novoShow, horario: e.target.value })}
+                      onBlur={(e) => setNovoShow({ ...novoShow, horario: formatarHorario(e.target.value) })}
+                      className="entrada" />
+                    <p className="text-[11px] text-muted mt-1">Pode escrever só &quot;22&quot; — vira 22:00 sozinho.</p>
                   </Campo>
                 </div>
                 <Campo label="Endereço completo">
