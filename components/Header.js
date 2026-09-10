@@ -120,7 +120,7 @@ function Logo({ conteudo, compacto }) {
 
 function MenuMobile({ aberto, onFechar, redesSociais, pathname }) {
   return (
-    <div className={`fixed inset-0 z-[70] md:hidden ${aberto ? '' : 'pointer-events-none'}`}>
+    <div className={`fixed inset-0 z-[70] md:hidden overflow-hidden ${aberto ? '' : 'pointer-events-none'}`}>
       <div
         className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${aberto ? 'opacity-100' : 'opacity-0'}`}
         onClick={onFechar}
