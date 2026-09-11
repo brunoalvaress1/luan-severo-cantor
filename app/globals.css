@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --brand: #F5A623;
+  --brand: #C1440E;
   --ink: #111111;
 }
 
@@ -49,11 +49,11 @@ body {
 
 .btn-brand {
   @apply relative inline-flex items-center gap-2 bg-brand-500 text-white font-bold uppercase text-sm tracking-wide px-6 py-3 rounded-full transition-all duration-300 overflow-hidden;
-  box-shadow: 0 8px 24px -8px rgba(245, 166, 35, .7);
+  box-shadow: 0 8px 24px -8px rgba(193, 68, 14, .7);
 }
 .btn-brand:hover {
   @apply bg-brand-600 -translate-y-0.5;
-  box-shadow: 0 14px 32px -8px rgba(245, 166, 35, .85);
+  box-shadow: 0 14px 32px -8px rgba(193, 68, 14, .85);
 }
 .btn-brand:active {
   @apply translate-y-0 scale-[.98];
@@ -73,7 +73,7 @@ body {
 
 /* Texto com preenchimento em degradê */
 .text-gradient {
-  background: linear-gradient(120deg, #F5A623 0%, #EA8A00 40%, #111 100%);
+  background: linear-gradient(120deg, #C1440E 0%, #A23A0E 40%, #111 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -124,7 +124,7 @@ body {
   left: 50%;
   width: 60%;
   height: 160%;
-  background: conic-gradient(from 90deg at 50% 0%, transparent 0deg, rgba(245, 166, 35, .35) 12deg, transparent 24deg);
+  background: conic-gradient(from 90deg at 50% 0%, transparent 0deg, rgba(193, 68, 14, .35) 12deg, transparent 24deg);
   transform-origin: top center;
   animation: varrer 7s ease-in-out infinite alternate;
   mix-blend-mode: screen;
@@ -214,7 +214,7 @@ body {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #F5A623, #EA8A00);
+  background: linear-gradient(90deg, #C1440E, #A23A0E);
   z-index: 60;
   transform-origin: left;
   transition: transform .1s linear;

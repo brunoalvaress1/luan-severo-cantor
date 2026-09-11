@@ -11,13 +11,13 @@ module.exports = {
         cream: '#FFFFFF',
         muted: '#6B7280',
         brand: {
-          50: '#FFF7ED',
-          100: '#FFEDD5',
-          200: '#FED7AA',
-          400: '#FB923C',
-          500: '#F5A623', // laranja principal (assinatura da marca)
-          600: '#EA8A00',
-          700: '#C2670A',
+          50: '#FDF2ED',
+          100: '#FBDFD1',
+          200: '#F3B995',
+          400: '#DD7142',
+          500: '#C1440E', // vermelho-alaranjado (assinatura da marca)
+          600: '#A23A0E',
+          700: '#7A2C0C',
         },
       },
       fontFamily: {
@@ -29,7 +29,7 @@ module.exports = {
       },
       boxShadow: {
         card: '0 10px 40px -12px rgba(17, 17, 17, 0.18)',
-        glow: '0 0 0 4px rgba(245, 166, 35, 0.15)',
+        glow: '0 0 0 4px rgba(193, 68, 14, 0.15)',
       },
       keyframes: {
         'fade-in-up': {
@@ -56,9 +56,9 @@ module.exports = {
           '100%': { transform: 'translateX(100%)' },
         },
         'pulse-ring': {
-          '0%': { boxShadow: '0 0 0 0 rgba(245, 166, 35, 0.5)' },
-          '70%': { boxShadow: '0 0 0 12px rgba(245, 166, 35, 0)' },
-          '100%': { boxShadow: '0 0 0 0 rgba(245, 166, 35, 0)' },
+          '0%': { boxShadow: '0 0 0 0 rgba(193, 68, 14, 0.5)' },
+          '70%': { boxShadow: '0 0 0 12px rgba(193, 68, 14, 0)' },
+          '100%': { boxShadow: '0 0 0 0 rgba(193, 68, 14, 0)' },
         },
       },
       animation: {

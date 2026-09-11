@@ -53,11 +53,6 @@ export default async function AgendaPage() {
           <h1 className="font-display text-5xl md:text-6xl mb-3 animate-fade-in-up" style={{ animationDelay: '.08s' }}>
             Próximos <span className="text-brand-500">shows</span>
           </h1>
-          <p className="text-muted max-w-2xl animate-fade-in-up" style={{ animationDelay: '.16s' }}>
-            {shows.length > 0
-              ? `${shows.length} ${shows.length === 1 ? 'data confirmada' : 'datas confirmadas'}. As que já passaram saem desta lista automaticamente.`
-              : 'Datas já realizadas saem da lista automaticamente.'}
-          </p>
 
           {shows.length === 0 ? (
             <div className="mt-12 rounded-3xl border border-black/10 bg-white p-10 md:p-14 text-center max-w-xl mx-auto">
